@@ -33,7 +33,7 @@ rule.dayOfWeek = [0, new schedule.Range(0, 7)];
 rule.hour = 8;
 rule.minute = 10;
 
-schedule.scheduleJob('*/5 * * * * *', function(){
+schedule.scheduleJob(rule, function(){
     // console.log('The answer to life, the universe, and everything!');
         request('https://www.packtpub.com//packt/offers/free-learning', function (err,res, body) {
         if (err) throw err;
